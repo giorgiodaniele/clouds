@@ -12,14 +12,6 @@ provider "azurerm" {
   features {}
 }
 
-locals {
-     region      = "norwayeast"
-     region_code = "noe"
-     team        = "team-1"
-     environment = "prod"
-     application = "kafka"
-}
-
 # create a new resource group
 resource "azurerm_resource_group" "rg" {
      name     = "rg-${local.application}-${local.environment}-${local.region_code}"
